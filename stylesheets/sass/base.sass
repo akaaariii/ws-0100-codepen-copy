@@ -1,4 +1,3 @@
-$background-color: #131417
 html
     font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif
     line-height: 1.5
@@ -13,3 +12,33 @@ body
 *, *:before, *:after
   box-sizing: border-box
   color:  #FFFFFF
+
+ul 
+    padding-left: 0
+    margin-left: 0
+    list-style-type: none
+
+a
+    text-decoration: none
+    &:hover
+        cursor: pointer
+
+// Small devices
+@mixin sm
+   @media (max-width: #{$screen-sm-min})
+       @content
+
+// Medium devices
+@mixin md
+   @media (max-width: #{$screen-md-min})
+       @content
+
+// Large devices
+@mixin lg
+   @media (max-width: #{$screen-lg-min})
+       @content
+
+// Extra large devices
+@mixin xl
+   @media (max-width: #{$screen-xl-min})
+       @content
